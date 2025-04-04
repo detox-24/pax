@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="paxer",
-    version="1.0.1",
+    version="0.1.0",
     packages=["pax"],
     install_requires=["click>=8.1.3", "paramiko>=3.4.0"],
     entry_points={"console_scripts": ["pax = pax.cli:cli"]},
