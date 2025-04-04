@@ -9,8 +9,8 @@ setup(
     author="Sathiya Moorthi P",
     author_email="sathiyamoorthithuran@gmail.com",  
     description="Deploy .deb packages over SSH to multiple hosts",
-    #long_description=open("README.md").read(),
-    #long_description_content_type="text/markdown",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     url="https://github.com/detox-24/pax",  
     classifiers=[
         "Programming Language :: Python :: 3",

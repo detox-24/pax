@@ -1,25 +1,3 @@
-Metadata-Version: 2.4
-Name: paxer
-Version: 1.0.1
-Summary: Deploy .deb packages over SSH to multiple hosts
-Home-page: https://github.com/detox-24/pax
-Author: Sathiya Moorthi P
-Author-email: sathiyamoorthithuran@gmail.com
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: POSIX :: Linux
-Description-Content-Type: text/markdown
-Requires-Dist: click>=8.1.3
-Requires-Dist: paramiko>=3.4.0
-Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
-Dynamic: home-page
-Dynamic: requires-dist
-Dynamic: summary
-
 ---
 output:
   pdf_document: default
