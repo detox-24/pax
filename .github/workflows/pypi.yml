@@ -23,7 +23,9 @@ jobs:
           pip install build twine  
 
       - name: Build Pax
-        run: python -m build  
+        run: |
+          cd /home/runner/work/pax
+          python -m build  
 
       - name: Publish to PyPI
         env:
