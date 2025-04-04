@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # Paxer
 
 **Efficiently deploy .deb packages across multiple hosts via SSH.**
@@ -72,8 +67,9 @@ Live hosts: ['192.168.1.31', '192.168.1.32', '192.168.1.34']
 192.168.1.32: SSH key setup
 192.168.1.34: SSH key setup
 Initialized 3 hosts.
-2. Deploy a Package
 ```
+
+2. Deploy a Package
 
 Install nginx on all targets:
 ```bash
