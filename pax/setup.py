@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="pax",
+    name="paxer",
     version="0.1.0",
     packages=["pax"],
     install_requires=["click>=8.1.3", "paramiko>=3.4.0"],

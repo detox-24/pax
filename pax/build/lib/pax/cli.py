@@ -63,9 +63,9 @@ def cli():
     pass
 
 @cli.command()
-@click.option("-r", "--range", help="IP range, e.g., 192.168.1.3-7")
-@click.option("-i", "--ips", "--ip", help="Comma-separated IPs, e.g., 192.168.1.3,192.168.1.7")
-@click.option("--exclude", help="IPs to exclude, e.g., 192.168.1.5")
+@click.option("-r", "--range", help="IP range, e.g., 192.x.x.31-46")
+@click.option("-i", "--ip", help="Comma-separated IPs, e.g., 192.x.x.x,192.x.x.x")
+@click.option("-e","--exclude", help="IPs to exclude, e.g.,192.x.x.x")
 @click.option("-p", "--per-ip-password", is_flag=True, help="Prompt for passwords per IP")
 @click.option("-u", "--username", default=os.getlogin(), help="SSH username (default: current user)")
 def init(range, ips, exclude, per_ip_password, username):
@@ -80,10 +80,10 @@ def init(range, ips, exclude, per_ip_password, username):
         pub_key = f.read().strip()
     
     if range and ips:
-        click.echo("Error: Use --range or --ips, not both.")
+        click.echo("Error: Use -r or --ip, not both.")
         return
     if not (range or ips):
-        click.echo("Error: Specify --range or --ips.")
+        click.echo("Error: Specify --range or --ip.")
         return
     
     targets = parse_range(range) if range else ips.split(",")
