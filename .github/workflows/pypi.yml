@@ -24,11 +24,13 @@ jobs:
 
       - name: Build Pax
         run: |
-          cd /home/runner/work/pax
+          cd pax
           python -m build  
 
       - name: Publish to PyPI
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-        run: python -m twine upload dist/*
+        run: |
+          cd pax
+          python -m twine upload dist/*
